@@ -1,0 +1,11 @@
+{
+  "extends": [
+    "angular",
+    "dustinspecker/esnext"
+  ],
+  "rules": {
+    "angular/ng_controller_name": [0, "/[A-Z].*Ctrl$/"],
+    "consistent-this": 0,
+    "no-warning-comments": 0
+  }
+}

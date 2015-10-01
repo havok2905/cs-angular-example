@@ -1,0 +1,29 @@
+@import '../lib/colors.less';
+
+.todo-list {
+  form {
+    margin: 20px 0;
+  }
+
+  input, button {
+    display: block;
+    margin: 10px 0;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+
+  input {
+    border: solid @gray 1px;
+  }
+
+  button {
+    border: none;
+    color: @white;
+    background-color: @blue;
+    cursor: pointer;
+
+    &.-save    { background-color: @green; }
+    &.-destroy { background-color: @red;   }
+  }
+}

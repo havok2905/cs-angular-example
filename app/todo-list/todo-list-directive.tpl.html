@@ -1,0 +1,26 @@
+<div class='todo-list'>
+  <button class='-destroy' name='clear-todos' ng-click='todoList.reset()'>Clear Todos</button>
+
+  <form>
+    <label for='find-todo'>Find Todo Item</label>
+    <input name='find-todo' type='text' placeholder='todo id' ng-model='todoId'/>
+    <button name='find-todo-button' ng-click='todoList.fetch(todoId)'>Find</button>
+    <p ng-bind='todoList.foundTodo.text'></p>
+  </form>
+
+  <form>
+    <label for='add-todo'>Add Todo Item</label>
+    <input name='add-todo' type='text' placeholder='todo item' ng-model='newItem'/>
+    <button name='add-todo-button' class='-save' ng-click='todoList.add(newItem)'>Add</button>
+  </form>
+
+  <ul>
+    <li ng-repeat='todo in todoList.todos'>
+      <p>
+        <span ng-bind='todo.id'></span>
+        <span ng-bind='todo.text'></span>
+      </p>
+      <button class='-destroy' ng-click='todoList.remove(todo.id)'>remove</button>
+    </li>
+  </ul>
+</div>
